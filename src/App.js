@@ -14,8 +14,15 @@ export default () => {
     const loadAll = async () => {
       // Pegando a lista total
       let list = await Tmdb.getHomeList();
-      // aqui eu utilizo o método criado a cima para exibir em tela a lista
       setMovieList(list);
+
+      // Pegando o Featured
+      let originals = list.filter(i=>i.slug === 'originals');
+      // Gerar um filme aleatório dentro do Featured
+      let randomChosen = Math.floor(Math.random() * (originals[0].items.results.length - 1));
+      // Agora vou pegar o filme gerado
+      let chosen = originals[0].items.results[randomChosen];
+      console.log(chosen);
     }
 
     loadAll();
