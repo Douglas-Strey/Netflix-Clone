@@ -10,6 +10,7 @@ export default () => {
 
   const [movieList, setMovieList] = useState([]);
   const [featuredData, setFeaturedData] = useState([null]);
+  const [blackHeader, setBlackHeader] = useState(false);
 
   useEffect(()=>{
     const loadAll = async () => {
@@ -32,9 +33,26 @@ export default () => {
     loadAll();
   }, []);
 
+  // Fazer sumir e aparecer o background do header
+  useEffect(() => {
+      const scrollListener = () => {
+        if(window.scrollY > 10) {
+            setBlackHeader(true);
+        } else {
+            setBlackHeader(false);
+        }
+      }
+
+      window.addEventListener('scroll', scrollListener);
+
+      return () => {
+          window.removeEventListener('scroll', scrollListener);
+      }
+  }, []);
+
   return (
     <div className="page">
-        <Header />
+        <Header black={blackHeader}/>
 
         {featuredData &&
             <FeaturedMovie item={featuredData} />
