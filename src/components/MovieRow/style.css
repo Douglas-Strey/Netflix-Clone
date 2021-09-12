@@ -57,3 +57,10 @@
 .movieRow:hover .movieRow--next {
     opacity: 1;
 }
+
+@media (max-width: 760px) {
+    .movieRow--before,
+    .movieRow--next {
+        opacity: 1;
+    }
+}
