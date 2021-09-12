@@ -89,6 +89,12 @@
     color: #999;
 }
 
+.featured--playButton {
+    margin-bottom: -12px;
+    padding-top: 10px;
+    font-size: 30px;
+}
+
 @media (max-width: 760px) {
     .featured {
         height: 90vh;
@@ -104,9 +110,11 @@
         max-width: 100%;
         margin-right: 30px;
         overflow: hidden;
-        text-overflow: ellipsis; /* Adicionando "..." ao final */
+        text-overflow: ellipsis;
+        /* Adicionando "..." ao final */
         display: -webkit-box;
-        -webkit-line-clamp: 5;  /* Quantidade de linhas */
+        -webkit-line-clamp: 5;
+        /* Quantidade de linhas */
         -webkit-box-orient: vertical;
     }
     .featured--watchButton, .featured--myListButton {
@@ -114,5 +122,11 @@
     }
     .featured--genres {
         font-size: 14px;
+    }
+    .featured--playButton {
+        padding-bottom: 10px;
+        margin-top: -10px;
+        padding-top: 0;
+        font-size: 28px;
     }
 }

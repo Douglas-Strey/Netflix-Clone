@@ -1,5 +1,6 @@
 import React from 'react';
 import './style.css';
+import PlayArrowIcon from '@material-ui/icons/PlayArrow';
 
 export default ({item}) => {
     // isso é feito para separar a data de lançamento informada pela API
@@ -26,7 +27,7 @@ export default ({item}) => {
                     </div>
                     <div className="featured--description">{item.overview}</div>
                     <div className="featured--buttons">
-                        <a href={`/watch/${item.id}`} className="featured--watchButton">▶ Assistir</a>
+                        <a href={`/watch/${item.id}`} className="featured--watchButton"><span><PlayArrowIcon className="featured--playButton"/></span> Assistir</a>
                         <a href={`/list/add/${item.id}`} className="featured--myListButton">+ Minha Lista</a>
                     </div>
                     <div className="featured--genres"><strong>Gêneros: </strong>{genres.join(', ')}</div>
