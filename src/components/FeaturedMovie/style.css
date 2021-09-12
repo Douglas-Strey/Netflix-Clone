@@ -90,8 +90,7 @@
 }
 
 .featured--playButton {
-    margin-bottom: -12px;
-    padding-top: 10px;
+    margin-bottom: -5px;
     font-size: 30px;
 }
 
@@ -124,9 +123,9 @@
         font-size: 14px;
     }
     .featured--playButton {
-        padding-bottom: 10px;
+        padding-bottom: 5px;
         margin-top: -10px;
-        padding-top: 0;
+        padding-top: 5px;
         font-size: 28px;
     }
 }
